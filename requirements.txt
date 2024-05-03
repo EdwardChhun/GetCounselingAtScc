@@ -2,6 +2,5 @@ requests
 beautifulsoup4
 selenium
 webdriver-manager
+numpy
 pyautogui
-urllib3
-pyautodui
