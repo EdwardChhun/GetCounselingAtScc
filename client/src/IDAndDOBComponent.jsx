@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './IDAndDOBComponent.css'; // Import CSS file for styling
+import ClearButton from './ClearButton';
 
 const IDAndDOBComponent = () => {
   const [id, setID] = useState('');
   const [dob, setDOB] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleIDChange = (e) => {
     setID(e.target.value);
@@ -13,19 +15,31 @@ const IDAndDOBComponent = () => {
     setDOB(e.target.value);
   };
 
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const formData = {
       id: id,
-      dob: dob
+      dob: dob,
+      email: email
     };
 
     console.log(formData);
   };
 
+  const handleClear = () => {
+    setID('');
+    setDOB('');
+    setEmail('');
+  };
+
   return (
     <form className="id-dob-container" onSubmit={handleSubmit}>
+
       <div className="input-group">
         <label htmlFor="id">ID:</label>
         <input
@@ -33,7 +47,7 @@ const IDAndDOBComponent = () => {
           id="id"
           value={id}
           onChange={handleIDChange}
-          placeholder="Enter your ID"
+          placeholder="Enter your WID"
         />
       </div>
 
@@ -47,7 +61,21 @@ const IDAndDOBComponent = () => {
         />
       </div>
 
-      <button type="submit"> Submit </button>
+      <div className="input-group">
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={handleEmailChange}
+          placeholder="Enter your email address"
+        />
+      </div>
+
+      <div className="button-group">
+        <button type="submit"> Submit </button>
+        <ClearButton onClick={handleClear} />
+      </div>
     </form>
   );
 };
