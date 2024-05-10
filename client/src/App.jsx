@@ -1,33 +1,27 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import sccLogo from  './assets/SacCity.jpg'
+import pantherLogo from './assets/Panther.webp'
 import './App.css'
+import IDAndDOBComponent from './IDAndDOBComponent'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+        <a href="https://scc.losrios.edu/student-resources/counseling-and-transfer" target= "_blank">
+          <img src={sccLogo} className="logo scc" alt="Scc Logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+        <a href="https://scc.losrios.edu" target= "_blank">
+          <img src={pantherLogo} className="logo scc spin" alt="Panther Logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+
+      <h1>One more step before we can book your appointment</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <IDAndDOBComponent />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

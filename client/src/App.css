@@ -11,12 +11,35 @@
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.logo.scc:hover {
+  filter: drop-shadow(0 0 2em #c93c2aaa);
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.image-container {
+  position: relative;
+  display: inline-block;
 }
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+.image-container:hover .text {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 @keyframes logo-spin {
   from {
