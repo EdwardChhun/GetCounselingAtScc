@@ -17,7 +17,8 @@
     margin-bottom: 5px;
   }
   
-  input {
+  input,
+  select {
     width: 90%;
     padding: 10px;
     font-size: 16px;

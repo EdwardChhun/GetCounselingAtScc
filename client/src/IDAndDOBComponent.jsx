@@ -6,6 +6,7 @@ const IDAndDOBComponent = () => {
   const [id, setID] = useState('');
   const [dob, setDOB] = useState('');
   const [email, setEmail] = useState('');
+  const [counselingReason, setCounselingReason] = useState('');
 
   const handleIDChange = (e) => {
     setID(e.target.value);
@@ -19,13 +20,18 @@ const IDAndDOBComponent = () => {
     setEmail(e.target.value);
   };
 
+  const handleCounselingReasonChange = (e) => {
+    setCounselingReason(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const formData = {
       id: id,
       dob: dob,
-      email: email
+      email: email,
+      counselingReason: counselingReason
     };
 
     console.log(formData);
@@ -35,6 +41,7 @@ const IDAndDOBComponent = () => {
     setID('');
     setDOB('');
     setEmail('');
+    setCounselingReason('');
   };
 
   return (
@@ -70,6 +77,24 @@ const IDAndDOBComponent = () => {
           onChange={handleEmailChange}
           placeholder="Enter your email address"
         />
+      </div>
+
+
+      <div className="input-group">
+        <label htmlFor="counselingReason">Counseling Reason:</label>
+        <select id="counselingReason" value={counselingReason} onChange={handleCounselingReasonChange}>
+          <option value="">Select Counseling Reason</option>
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+          <option value="Option 3">Option 3</option>
+          <option value="Option 4">Option 4</option>
+          <option value="Option 5">Option 5</option>
+          <option value="Option 6">Option 6</option>
+          <option value="Option 7">Option 7</option>
+          <option value="Option 8">Option 8</option>
+          <option value="Option 9">Option 9</option>
+          <option value="Option 10">Option 10</option>
+        </select>
       </div>
 
       <div className="button-group">

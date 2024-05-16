@@ -42,12 +42,14 @@ dob        : string
 """
 enter_student_id.clear()
 enter_student_id.send_keys(student_id)
+time.sleep(1)
 
 enter_dob.clear()
 enter_dob.send_keys(dob)
+time.sleep(1)
 
 sign_in_button.click()
-
+time.sleep(1)
 # Page 2 ----------------------------------------------------------------
 
 # Make an appointment for a specific reason
@@ -59,7 +61,10 @@ WebDriverWait(driver,5).until(
     EC.presence_of_element_located((By.ID, "cmdMakeAppt"))
 )
 driver.find_element(By.ID, "cmdMakeAppt").click()
+time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[@class='table-container']/form[@id='frmReason']/div[@class='center-block margin-top']/select[@id='reason']/option[2]").click()
+time.sleep(1)
 driver.find_element(By.XPATH, "/html/body/div[@class='table-container']/form[@id='frmReason']/div[@class='center-block']/button[@id='cmdContinue']").click()
+time.sleep(1)
 
 # Page 3, need to check for appointments available ---------------------
