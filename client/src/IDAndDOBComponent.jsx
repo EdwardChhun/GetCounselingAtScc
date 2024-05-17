@@ -84,16 +84,21 @@ const IDAndDOBComponent = () => {
         <label htmlFor="counselingReason">Counseling Reason:</label>
         <select id="counselingReason" value={counselingReason} onChange={handleCounselingReasonChange}>
           <option value="">Select Counseling Reason</option>
-          <option value="Option 1">Option 1</option>
-          <option value="Option 2">Option 2</option>
-          <option value="Option 3">Option 3</option>
-          <option value="Option 4">Option 4</option>
-          <option value="Option 5">Option 5</option>
-          <option value="Option 6">Option 6</option>
-          <option value="Option 7">Option 7</option>
-          <option value="Option 8">Option 8</option>
-          <option value="Option 9">Option 9</option>
-          <option value="Option 10">Option 10</option>
+          <option value="Option 1">Academic Renewal</option>
+          <option value="Option 2">Consortium</option>
+          <option value="Option 3">Financial Aid Course Review</option>
+          <option value="Option 4">Graduation Petition</option>
+          <option value="Option 5">IGETC/CSU Certification</option>
+          <option value="Option 6">International Student</option>
+          <option value="Option 7">Personal or Emotional Concern</option>
+          <option value="Option 8">Petition for .5 Priority Registration</option>
+          <option value="Option 9">Pick Classes (multi-semester)</option>
+          <option value="Option 10">Pick Classes 1-sem</option>
+          <option value="Option 10">Pre-Requisite Info</option>
+          <option value="Option 10">Probation & Dismissal (Hold on record)</option>
+          <option value="Option 10">Transcript Evaluation</option>
+          <option value="Option 10">Transfer or TAG Questions</option>
+          <option value="Option 10">Veteran Student (VA Planner)</option>
         </select>
       </div>
 
