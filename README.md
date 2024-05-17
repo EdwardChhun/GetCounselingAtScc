@@ -8,6 +8,16 @@ This is with 1 second delay on each action for visibility.
 
 Working bot, currently it is the end of spring semester so counseling options are on *I think*. Hopefully we get this running for next fall semester for students to utilize.
 
+## To Run:
+
+Create and activate python venv [Link to setting up a virtual environment](https://python.land/virtual-environments/virtualenv)
+
+Then install the requirements:
+```bash
+pip install -r requirements.txt
+```
+
+WIP...
 
 ## To Do:
 
