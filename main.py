@@ -1,7 +1,12 @@
 """
 Making In-person appointments only for now at SCC
-Basics: Making an appointment for [Consortium]
-To Do: Scrape the data and search for "Counselors" and "Times available"
+Basics  : Making an appointment for [Consortium]
+To Do   : Scrape the data and search for "Counselors" and "Times available"
+        : Have front end feed data and send JSON object for backend to run
+        : Create run time, and host server on .tech domain address
+        : Have back end run time hosted (Google cloud, or Rasberry Pi)
+        : Test run
+
 """
 # importing necessary packages 
 from selenium import webdriver
