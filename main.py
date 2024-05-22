@@ -1,7 +1,9 @@
 """
 Making In-person appointments only for now at SCC
 Basics  : Making an appointment for [Consortium]
-To Do   : Scrape the data and search for "Counselors" and "Times available"
+To Do   : Most important (Convert this script into a class with methods)
+
+        : Scrape the data and search for "Counselors" and "Times available"
         : Have front end feed data and send JSON object for backend to run
         : Create run time, and host server on .tech domain address
         : Have back end run time hosted (Google cloud, or Rasberry Pi)
@@ -19,7 +21,7 @@ import time
 
 """
 XPath Cheat Sheet = "https://quickref.me/xpath"
-SCC Counseling = "https://esars.scc.losrios.edu/esars/counseling_ip/eSARS.asp?WCI=Init&WCE=Settings"
+SCC Counseling = "https://esars.scc.losrios.edu/esars/counseling_ip/eSARS.asp"
 """
 
 # for holding the resultant list 
@@ -39,6 +41,7 @@ enter_student_id = driver.find_element(By.XPATH, '//*[@id="ssn"]')
 enter_dob = driver.find_element(By.XPATH, '//*[@id="dob"]')
 sign_in_button = driver.find_element(By.XPATH, '//*[@id="cmdContinue"]')
 
+# Page 1 ----------------------------------------------------------------
 # Enter the information
 """ 
 Variables:
@@ -55,8 +58,8 @@ time.sleep(1)
 
 sign_in_button.click()
 time.sleep(1)
-# Page 2 ----------------------------------------------------------------
 
+# Page 2 ----------------------------------------------------------------
 # Make an appointment for a specific reason
 """ 
 Variables:

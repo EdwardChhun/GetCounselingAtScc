@@ -1,6 +1,4 @@
-requests
-beautifulsoup4
 selenium
-webdriver-manager
-numpy
-pyautogui
+Flask
+axios
+flask-cors
