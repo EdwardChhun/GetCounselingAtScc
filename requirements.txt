@@ -2,3 +2,4 @@ selenium
 Flask
 axios
 flask-cors
+Flask-SQLAlchemy
