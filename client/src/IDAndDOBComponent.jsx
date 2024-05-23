@@ -24,7 +24,7 @@ const IDAndDOBComponent = () => {
     setCounselingReason(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = {
@@ -33,8 +33,25 @@ const IDAndDOBComponent = () => {
       email: email,
       counselingReason: counselingReason
     };
-
-    console.log(formData);
+    const url = "http://127.0.0.1:5000/create_contact"
+    const options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    }
+    try{
+      const response = await fetch(url, options)
+      if (response.status !== 201 && response.status !== 200) {
+        const data = await response.json()
+        alert(data.message)
+      } else {
+        // successful
+      } 
+    } catch (error) {
+      console.log(formData);
+    }
   };
 
   const handleClear = () => {

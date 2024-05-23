@@ -1,11 +1,24 @@
-// import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import sccLogo from  './assets/SacCity.jpg'
 import pantherLogo from './assets/Panther.webp'
 import './App.css'
 import IDAndDOBComponent from './IDAndDOBComponent'
-import axios from 'axios'
+//import axios from 'axios'
 
 function App() {
+  const [contacts,setContacts] = useState([])
+
+  useEffect(() => {
+    fetchContacts()
+  }, [])
+
+  const fetchContacts = async () => {
+      const response = await fetch("http://127.0.0.1:5000/contacts")
+      const data = await response.json()
+      setContacts(data.contacts)
+      console.log(data.contacts)
+  }
+
 
   return (
     <>
@@ -21,7 +34,7 @@ function App() {
 
       <h1>One more step before we can book your appointment</h1>
       <div className="card">
-        <IDAndDOBComponent />
+        <IDAndDOBComponent contacts={contacts}/>
       </div>
 
       <h1> What We Do </h1>
