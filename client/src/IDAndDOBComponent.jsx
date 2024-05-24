@@ -65,13 +65,13 @@ const IDAndDOBComponent = () => {
     <form className="id-dob-container" onSubmit={handleSubmit}>
 
       <div className="input-group">
-        <label htmlFor="id">ID:</label>
+        <label htmlFor="id">Losrios WiD:</label>
         <input
           type="text"
           id="id"
           value={id}
           onChange={handleIDChange}
-          placeholder="Enter your WID"
+          placeholder="Enter your WiD"
         />
       </div>
 

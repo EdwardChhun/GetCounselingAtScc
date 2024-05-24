@@ -32,7 +32,6 @@ function App() {
         </a>
       </div>
 
-      <h1>One more step before we can book your appointment</h1>
       <div className="card">
         <IDAndDOBComponent contacts={contacts}/>
       </div>
