@@ -1,6 +1,9 @@
 # GetCounselingAtScc
 Students at SCC tend to have to wait till midnight for the school's website to restart, we are going to create a website for users to input their preferred times and book them an appointment without the risk of losing sleep.
 
+# Front end rough draft
+![GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXV1ODltaXBvOXZheGcyZDFnbDVuNGZqbXQ1dGN1ZTQzbnJxYjU0dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZSx2bJzBM4kFi2HjNK/giphy.gif)
+
 # Test script
 ![GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDM2cmF1cWl3YTU2cDdiZDAzYWY2amkyOHMyN3B2anFxNDA5bHl4NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QSWY1npHSdiKmzRY7c/giphy.gif)
 
@@ -15,6 +18,30 @@ Create and activate python venv [Link to setting up a virtual environment](https
 Then install the requirements:
 ```bash
 pip install -r requirements.txt
+```
+```bash
+# Make sure you're in backend directory if not do
+
+cd backend
+```
+In the script1.py file on the bottom should have arguments you can mess with for inputting the info
+```python
+if __name__ == "__main__":
+    # use for test data
+    student_id = "W0000000"
+    dob = "MM/DD/YYYY"
+    """
+    Depending on which option you pick for counseling_reason 1 - 15
+    """
+    counseling_reason = 2  #Consortium
+
+    
+    bot = WebBot(student_id, dob, counseling_reason)
+    bot.open_web_page()
+    bot.execute_web_bot()
+```
+```bash
+python script1.py
 ```
 
 ## To Run Website:
