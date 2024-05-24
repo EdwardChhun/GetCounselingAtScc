@@ -111,11 +111,11 @@ const IDAndDOBComponent = () => {
           <option value="Option 8">Petition for .5 Priority Registration</option>
           <option value="Option 9">Pick Classes (multi-semester)</option>
           <option value="Option 10">Pick Classes 1-sem</option>
-          <option value="Option 10">Pre-Requisite Info</option>
-          <option value="Option 10">Probation & Dismissal (Hold on record)</option>
-          <option value="Option 10">Transcript Evaluation</option>
-          <option value="Option 10">Transfer or TAG Questions</option>
-          <option value="Option 10">Veteran Student (VA Planner)</option>
+          <option value="Option 11">Pre-Requisite Info</option>
+          <option value="Option 12">Probation & Dismissal (Hold on record)</option>
+          <option value="Option 13">Transcript Evaluation</option>
+          <option value="Option 14">Transfer or TAG Questions</option>
+          <option value="Option 15">Veteran Student (VA Planner)</option>
         </select>
       </div>
 
