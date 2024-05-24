@@ -102,8 +102,8 @@ class WebBot():
  
 if __name__ == "__main__":
     # use for test data
-    student_id = "W2056162"
-    dob = "02/01/2005" 
+    student_id = "W2056162" #WiD
+    dob = "02012005"        #MM/DD/YYYY 
     counseling_reason = 2   #Consortium
     
     bot = WebBot(student_id, dob, counseling_reason)
