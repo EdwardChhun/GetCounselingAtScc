@@ -1,11 +1,15 @@
 # GetCounselingAtScc
+### Inspiration: 
 Students at SCC tend to have to wait till midnight for the school's website to restart, we are going to create a website for users to input their preferred times and book them an appointment without the risk of losing sleep.
 
-# Local Fullstack Simulation using Flask server to write inputs onto JSON and running the automation in the backend
-## Frontend
+### Current tech stack:
+This website uses Vite/React as frontend and Python as backend as well as a Flask server
+
+## Frontend - Posts to http://localhost/save-student-info
 [![ezgif-com-video-to-gif-converter.gif](https://i.postimg.cc/ZnGnYkMB/ezgif-com-video-to-gif-converter.gif)](https://postimg.cc/FkxNG6mN)
-## Backend
+## Backend - Requests for json data from http://localhost/save-student-info and runs WebBot script
 [![gcascc-backend-ezgif-com-video-to-gif-converter.gif](https://i.postimg.cc/bNg4j0S8/gcascc-backend-ezgif-com-video-to-gif-converter.gif)](https://postimg.cc/56HsBCmk)
+
 This is with 1 second delay on each action for visibility.
 Sorry for the bad resolution.
 
