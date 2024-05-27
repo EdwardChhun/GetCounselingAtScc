@@ -4,7 +4,7 @@ class Contact(db.Model):
     student_id = db.Column(db.String, primary_key=True)
     dob= db.Column(db.String(8), unique=False, nullable=False)
     email = db.Column(db.String(80), unique=False, nullable=False)
-    counseling_reason= db.Column(db.String(20), unique=False, nullable=False)
+    counseling_reason= db.Column(db.String(20), unique=False, nullable=True)
     
     def to_json(self):
         return {

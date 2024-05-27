@@ -1,64 +1,69 @@
 # GetCounselingAtScc
+### Inspiration: 
 Students at SCC tend to have to wait till midnight for the school's website to restart, we are going to create a website for users to input their preferred times and book them an appointment without the risk of losing sleep.
 
-# Front end rough draft
-![GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXV1ODltaXBvOXZheGcyZDFnbDVuNGZqbXQ1dGN1ZTQzbnJxYjU0dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZSx2bJzBM4kFi2HjNK/giphy.gif)
+### Current tech stack:
+This website uses Vite/React as frontend and Python as backend as well as a Flask server
 
-# Test script
-![GIF](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDM2cmF1cWl3YTU2cDdiZDAzYWY2amkyOHMyN3B2anFxNDA5bHl4NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QSWY1npHSdiKmzRY7c/giphy.gif)
+## Frontend - Posts to http://localhost/save-student-info
+[![ezgif-com-video-to-gif-converter.gif](https://i.postimg.cc/ZnGnYkMB/ezgif-com-video-to-gif-converter.gif)](https://postimg.cc/FkxNG6mN)
+## Backend - Requests for json data from http://localhost/save-student-info and runs WebBot script
+[![gcascc-backend-ezgif-com-video-to-gif-converter.gif](https://i.postimg.cc/bNg4j0S8/gcascc-backend-ezgif-com-video-to-gif-converter.gif)](https://postimg.cc/56HsBCmk)
 
 This is with 1 second delay on each action for visibility.
+Sorry for the bad resolution.
 
 Working bot, currently it is the end of spring semester so counseling options are on *I think*. Hopefully we get this running for next fall semester for students to utilize.
 
-## To Run Web Bot:
+## To Run Locally:
+
+Make sure you have 3 terminals open
 
 Create and activate python venv [Link to setting up a virtual environment](https://python.land/virtual-environments/virtualenv)
 
+For Windows its:
+
+```bash
+.venv/Scripts/activate
+```
 Then install the requirements:
 ```bash
 pip install -r requirements.txt
 ```
+
+- Spin up the Flask server:
 ```bash
-# Make sure you're in backend directory if not do
 
 cd backend
+python server.py
 ```
-In the script1.py file on the bottom should have arguments you can mess with for inputting the info
-```python
-if __name__ == "__main__":
-    # use for test data
-    student_id = "W0000000"
-    dob = "MM/DD/YYYY"
-    """
-    Depending on which option you pick for counseling_reason 1 - 15
-    """
-    counseling_reason = 2  #Consortium
 
-    
-    bot = WebBot(student_id, dob, counseling_reason)
-    bot.open_web_page()
-    bot.execute_web_bot()
-```
+- Host the front end on local (On another terminal) (Ctrl+C to close)
 ```bash
-python script1.py
-```
-
-## To Run Website:
-
-Direct to client directory and run 
-
-```bash
-npm install
-```
-And then run 
-```bash
+cd client
 npm run dev
 ```
-WIP...
 
-## To Do:
+The inputs into the form will write to "client\public\student_info.json"
 
-1. Host website 
-2. Email API
-3. Low-cost Run Time
+- To run the webbot (On another terminal)
+
+Spin up a venv, if you don't have it already on this terminal do:
+```bash
+.venv/Scripts/activate
+```
+else, just continue
+
+```bash
+cd backend
+python script.py
+```
+
+This will run if all the inputs from the user match with the LosRios Database for students
+
+## TODO:
+Have the Counseling from SCC to release their available appointements for further development
+
+To host and deploy the website with the WebBot running
+
+Create a database to store tables from users as .csv files

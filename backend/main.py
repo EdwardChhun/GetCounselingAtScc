@@ -1,7 +1,8 @@
 from flask import request, jsonify
 from config import app, db
 from models import Contact
-from script1 import WebBot
+from script import WebBot
+import json
 
 @app.route("/contacts" , methods=["GET"])
 def get_contacts():
@@ -30,40 +31,26 @@ def create_contact():
     
     return jsonify({"message": "User created!"}), 201
 
+#----------------------------------------------------------------
 """ 
-Function that takes info from user and runs the web bot script
-Inputs  : studentId, dob, email, counselingReason
-Outputs : <Respond to front end with error handling>
+
+THIS EXISTS IN "server.py"
+
+This function is used solely for local testing purposes
+This will write to "client\public\student_info.json" with a JSON opject
+Used for "backend\script1.py" to listen and execute the webbot
 """
-@app.route("/get_info", methods=["POST"])
-def get_info():
-    try:
-        # Extract JSON data from request
-        data = request.get_json()
-        
-        # Parse JSON data
-        student_id = data.get("studentId")
-        dob = data.get("dob")
-        counseling_reason = data.get("counselingReason")
-        
-        # Validate received data
-        if not student_id or not dob or counseling_reason is None:
-            return jsonify({"error": "Missing required fields"}), 400
-        
-        # Initialize and run WebBot
-        bot = WebBot(student_id, dob, counseling_reason)
-        bot.open_web_page()
-        bot.execute_web_bot()
-        
-        return jsonify({"message": "WebBot executed successfully"}), 200
-    
-    except Exception as e:
-        # Handle errors
-        return jsonify({"error": str(e)}), 500
-        
+@app.route('/save-student-info', methods=['POST'])
+def save_student_info():
+    data = request.json
+    with open('../client/public/student_info.json', 'w') as f:
+        json.dump(data, f, indent=4)
+    return jsonify({'message': 'Data saved successfully!'}), 200
+
+#----------------------------------------------------------------
 
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
         
-    app.run(debug=True)
+    app.run(port=5000,debug=True)
