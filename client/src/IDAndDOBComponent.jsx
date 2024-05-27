@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './IDAndDOBComponent.css'; // Import CSS file for styling
 import ClearButton from './ClearButton';
+import axios from 'axios';
 
 const IDAndDOBComponent = () => {
   const [id, setID] = useState('');
@@ -27,30 +28,19 @@ const IDAndDOBComponent = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = {
+    const data = {
       id: id,
       dob: dob,
       email: email,
-      counselingReason: counselingReason
+      counselingReason: parseInt(counselingReason)
     };
-    const url = "http://127.0.0.1:5000/create_contact"
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    }
-    try{
-      const response = await fetch(url, options)
-      if (response.status !== 201 && response.status !== 200) {
-        const data = await response.json()
-        alert(data.message)
-      } else {
-        // successful
-      } 
+    try {
+      await axios.post('http://localhost:5000/save-student-info', data);
+      console.log(data);
+      alert('Data saved successfully!');
     } catch (error) {
-      console.log(formData);
+        console.error('Error saving data', error);
+        alert('Failed to save data.');
     }
   };
 
@@ -101,21 +91,21 @@ const IDAndDOBComponent = () => {
         <label htmlFor="counselingReason">Counseling Reason:</label>
         <select id="counselingReason" value={counselingReason} onChange={handleCounselingReasonChange}>
           <option value="">Select Counseling Reason</option>
-          <option value="Option 1">Academic Renewal</option>
-          <option value="Option 2">Consortium</option>
-          <option value="Option 3">Financial Aid Course Review</option>
-          <option value="Option 4">Graduation Petition</option>
-          <option value="Option 5">IGETC/CSU Certification</option>
-          <option value="Option 6">International Student</option>
-          <option value="Option 7">Personal or Emotional Concern</option>
-          <option value="Option 8">Petition for .5 Priority Registration</option>
-          <option value="Option 9">Pick Classes (multi-semester)</option>
-          <option value="Option 10">Pick Classes 1-sem</option>
-          <option value="Option 11">Pre-Requisite Info</option>
-          <option value="Option 12">Probation & Dismissal (Hold on record)</option>
-          <option value="Option 13">Transcript Evaluation</option>
-          <option value="Option 14">Transfer or TAG Questions</option>
-          <option value="Option 15">Veteran Student (VA Planner)</option>
+          <option value="1">Academic Renewal</option>
+          <option value="2">Consortium</option>
+          <option value="3">Financial Aid Course Review</option>
+          <option value="4">Graduation Petition</option>
+          <option value="5">IGETC/CSU Certification</option>
+          <option value="6">International Student</option>
+          <option value="7">Personal or Emotional Concern</option>
+          <option value="8">Petition for .5 Priority Registration</option>
+          <option value="9">Pick Classes (multi-semester)</option>
+          <option value="10">Pick Classes 1-sem</option>
+          <option value="11">Pre-Requisite Info</option>
+          <option value="12">Probation & Dismissal (Hold on record)</option>
+          <option value="13">Transcript Evaluation</option>
+          <option value="14">Transfer or TAG Questions</option>
+          <option value="15">Veteran Student (VA Planner)</option>
         </select>
       </div>
 
