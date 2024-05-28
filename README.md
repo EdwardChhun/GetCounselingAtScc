@@ -6,29 +6,20 @@ Students at SCC tend to have to wait till midnight for the school's website to r
 ![GIF](https://github.com/EdwardChhun/GetCounselingAtScc/blob/main/media/2024-05-2719-24-02-Trim-ezgif.com-video-to-gif-converter.gif)
 Working bot, currently it is the end of spring semester so counseling options are on *I think*. Hopefully we get this running for next fall semester for students to utilize.
 
-## To Run Locally:
+## Installation:
 
-Make sure you have 3 terminals open
-
-Create and activate python venv [Link to setting up a virtual environment](https://python.land/virtual-environments/virtualenv)
-
-For Windows its:
-
+1. Install dependencies
 ```bash
-.venv/Scripts/activate
-```
-Then install the requirements:
-```bash
+npm install
 pip install -r requirements.txt
 ```
 
-- Spin up the Flask server:
+2. Flask Server Initialization (Terminal 1)
 ```bash
-cd backend
-python server.py
+python backend\server.py
 ```
 
-- Host the front end on local (On another terminal) (Ctrl+C to close)
+3. Run Development Server (Terminal 2)
 ```bash
 cd client
 npm run dev
