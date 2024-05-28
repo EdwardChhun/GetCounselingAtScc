@@ -29,3 +29,4 @@ npm run dev
 1. Host Website & FLASK server on Google Cloud
 2. Finalize the web bot functions after appointments are updated for next semester
 3. Input validations
+4. Include time block logic
