@@ -2,16 +2,8 @@
 ### Inspiration: 
 Students at SCC tend to have to wait till midnight for the school's website to restart, we are going to create a website for users to input their preferred times and book them an appointment without the risk of losing sleep.
 
-### Current tech stack:
-This website uses Vite/React as frontend and Python as backend as well as a Flask server
-
-## Frontend - Posts to http://localhost/save-student-info
-[![ezgif-com-video-to-gif-converter.gif](https://i.postimg.cc/ZnGnYkMB/ezgif-com-video-to-gif-converter.gif)](https://postimg.cc/FkxNG6mN)
-## Backend - Requests for json data from http://localhost/save-student-info and runs WebBot script
-[![gcascc-backend-ezgif-com-video-to-gif-converter.gif](https://i.postimg.cc/bNg4j0S8/gcascc-backend-ezgif-com-video-to-gif-converter.gif)](https://postimg.cc/56HsBCmk)
-
-This is with 1 second delay on each action for visibility.
-Sorry for the bad resolution.
+# Project DEMO
+![GIF](https://github.com/EdwardChhun/GetCounselingAtScc/blob/main/2024-05-2719-24-02-Trim-ezgif.com-video-to-gif-converter.gif)
 
 Working bot, currently it is the end of spring semester so counseling options are on *I think*. Hopefully we get this running for next fall semester for students to utilize.
 
