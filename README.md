@@ -3,8 +3,7 @@
 Students at SCC tend to have to wait till midnight for the school's website to restart, we are going to create a website for users to input their preferred times and book them an appointment without the risk of losing sleep.
 
 # Project DEMO
-![GIF]([https://github.com/EdwardChhun/GetCounselingAtScc/blob/main/2024-05-2719-24-02-Trim-ezgif.com-video-to-gif-converter.gif](https://github.com/EdwardChhun/GetCounselingAtScc/blob/main/media/2024-05-2719-24-02-Trim-ezgif.com-video-to-gif-converter.gif))
-
+![GIF](https://github.com/EdwardChhun/GetCounselingAtScc/blob/main/2024-05-2719-24-02-Trim-ezgif.com-video-to-gif-converter.gif)
 Working bot, currently it is the end of spring semester so counseling options are on *I think*. Hopefully we get this running for next fall semester for students to utilize.
 
 ## To Run Locally:
