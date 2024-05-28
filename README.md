@@ -25,7 +25,6 @@ pip install -r requirements.txt
 
 - Spin up the Flask server:
 ```bash
-
 cd backend
 python server.py
 ```
@@ -36,26 +35,7 @@ cd client
 npm run dev
 ```
 
-The inputs into the form will write to "client\public\student_info.json"
-
-- To run the webbot (On another terminal)
-
-Spin up a venv, if you don't have it already on this terminal do:
-```bash
-.venv/Scripts/activate
-```
-else, just continue
-
-```bash
-cd backend
-python script.py
-```
-
-This will run if all the inputs from the user match with the LosRios Database for students
-
 ## TODO:
-Have the Counseling from SCC to release their available appointements for further development
-
-To host and deploy the website with the WebBot running
-
-Create a database to store tables from users as .csv files
+1. Host Website & FLASK server on Google Cloud
+2. Finalize the web bot functions after appointments are updated for next semester
+3. Input validations
